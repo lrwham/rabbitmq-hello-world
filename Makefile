@@ -19,7 +19,7 @@ install:
 
 .PHONY: docker-run
 docker-run:
-	docker run -it --name rabbitmq -p 5672:5672 -p 15672:15672 $(DOCKER_IMAGE)
+	docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 $(DOCKER_IMAGE)
 
 .PHONY: run-send
 run-send:
